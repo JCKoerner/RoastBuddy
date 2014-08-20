@@ -22,6 +22,7 @@
 		762A12B419A526F7009F4D16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762A129319A526F7009F4D16 /* UIKit.framework */; };
 		762A12BC19A526F7009F4D16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 762A12BA19A526F7009F4D16 /* InfoPlist.strings */; };
 		762A12BE19A526F7009F4D16 /* RoastBuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762A12BD19A526F7009F4D16 /* RoastBuddyTests.m */; };
+		762A12C919A5387F009F4D16 /* Roast.m in Sources */ = {isa = PBXBuildFile; fileRef = 762A12C819A5387F009F4D16 /* Roast.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		762A12B919A526F7009F4D16 /* RoastBuddyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RoastBuddyTests-Info.plist"; sourceTree = "<group>"; };
 		762A12BB19A526F7009F4D16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		762A12BD19A526F7009F4D16 /* RoastBuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastBuddyTests.m; sourceTree = "<group>"; };
+		762A12C719A5387F009F4D16 /* Roast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roast.h; sourceTree = "<group>"; };
+		762A12C819A5387F009F4D16 /* Roast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 		762A128319A526F7009F4D16 = {
 			isa = PBXGroup;
 			children = (
+				762A12C719A5387F009F4D16 /* Roast.h */,
+				762A12C819A5387F009F4D16 /* Roast.m */,
 				762A129519A526F7009F4D16 /* RoastBuddy */,
 				762A12B719A526F7009F4D16 /* RoastBuddyTests */,
 				762A128E19A526F7009F4D16 /* Frameworks */,
@@ -257,6 +262,7 @@
 				762A12A919A526F7009F4D16 /* SecondViewController.m in Sources */,
 				762A12A019A526F7009F4D16 /* AppDelegate.m in Sources */,
 				762A12A619A526F7009F4D16 /* FirstViewController.m in Sources */,
+				762A12C919A5387F009F4D16 /* Roast.m in Sources */,
 				762A129C19A526F7009F4D16 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +391,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoastBuddy/RoastBuddy-Prefix.pch";
 				INFOPLIST_FILE = "RoastBuddy/RoastBuddy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -398,6 +405,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RoastBuddy/RoastBuddy-Prefix.pch";
 				INFOPLIST_FILE = "RoastBuddy/RoastBuddy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
