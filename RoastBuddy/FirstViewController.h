@@ -12,6 +12,10 @@
     bool isRunning;
     NSTimeInterval startTime;
     NSTimeInterval elapsedTime;
+    
+    
+    NSTimeInterval globalElapsedTime;
+    NSTimeInterval currentEpochStart;
 }
 
 
@@ -19,13 +23,18 @@
 
 @property (nonatomic, retain) NSTimer *roastTimer;
 
-@property (weak, nonatomic) IBOutlet UILabel *elapsedTime;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *timerDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *elapsedTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *targetTimeLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIButton *resetButton;
 
 -(IBAction)handleStartPressed:(id)sender;
+-(IBAction)handleResetPressed:(id)sender;
+
 
 -(NSString *)formattedTimeStringForInterval:(NSTimeInterval)theInterval;
 
