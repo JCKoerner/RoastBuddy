@@ -17,6 +17,7 @@
 
 @property(nonatomic, retain) NSDate *roastDate;
 @property(assign) NSTimeInterval firstCrack;
+@property(assign) NSTimeInterval firstCrackEnd;
 @property(assign) NSTimeInterval secondCrack;
 @property(assign) NSTimeInterval totalRoastTime;
 

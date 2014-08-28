@@ -10,8 +10,6 @@
 
 @interface FirstViewController : UIViewController <UIAlertViewDelegate>{
     bool isRunning;
-    NSTimeInterval startTime;
-    NSTimeInterval elapsedTime;
     
     
     NSTimeInterval globalElapsedTime;
@@ -20,6 +18,8 @@
     NSTimeInterval firstCrackStart;
     NSTimeInterval firstCrackEnd;
     NSTimeInterval secondCrackStart;
+    NSTimeInterval totalRoastTime;
+    
     
     NSInteger phase;
     NSArray *crackArray;
@@ -65,5 +65,8 @@
 
 -(void)activateButton:(UIButton *)button;
 -(void)deactivateButton:(UIButton *)button;
+
+-(NSTimeInterval)getElapsedRoastTime;
+
 
 @end

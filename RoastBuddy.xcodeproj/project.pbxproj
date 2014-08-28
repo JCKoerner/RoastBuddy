@@ -23,6 +23,8 @@
 		762A12BC19A526F7009F4D16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 762A12BA19A526F7009F4D16 /* InfoPlist.strings */; };
 		762A12BE19A526F7009F4D16 /* RoastBuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762A12BD19A526F7009F4D16 /* RoastBuddyTests.m */; };
 		762A12C919A5387F009F4D16 /* Roast.m in Sources */ = {isa = PBXBuildFile; fileRef = 762A12C819A5387F009F4D16 /* Roast.m */; };
+		76CA999019AFC7120096FB4D /* SaveRoastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CA998E19AFC7120096FB4D /* SaveRoastViewController.m */; };
+		76CA999119AFC7120096FB4D /* SaveRoastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76CA998F19AFC7120096FB4D /* SaveRoastViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +59,11 @@
 		762A12B919A526F7009F4D16 /* RoastBuddyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RoastBuddyTests-Info.plist"; sourceTree = "<group>"; };
 		762A12BB19A526F7009F4D16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		762A12BD19A526F7009F4D16 /* RoastBuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastBuddyTests.m; sourceTree = "<group>"; };
-		762A12C719A5387F009F4D16 /* Roast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roast.h; sourceTree = "<group>"; };
-		762A12C819A5387F009F4D16 /* Roast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roast.m; sourceTree = "<group>"; };
+		762A12C719A5387F009F4D16 /* Roast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Roast.h; path = ../Roast.h; sourceTree = "<group>"; };
+		762A12C819A5387F009F4D16 /* Roast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Roast.m; path = ../Roast.m; sourceTree = "<group>"; };
+		76CA998D19AFC7110096FB4D /* SaveRoastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveRoastViewController.h; sourceTree = "<group>"; };
+		76CA998E19AFC7120096FB4D /* SaveRoastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveRoastViewController.m; sourceTree = "<group>"; };
+		76CA998F19AFC7120096FB4D /* SaveRoastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveRoastViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +93,6 @@
 		762A128319A526F7009F4D16 = {
 			isa = PBXGroup;
 			children = (
-				762A12C719A5387F009F4D16 /* Roast.h */,
-				762A12C819A5387F009F4D16 /* Roast.m */,
 				762A129519A526F7009F4D16 /* RoastBuddy */,
 				762A12B719A526F7009F4D16 /* RoastBuddyTests */,
 				762A128E19A526F7009F4D16 /* Frameworks */,
@@ -120,11 +123,16 @@
 		762A129519A526F7009F4D16 /* RoastBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				762A12C719A5387F009F4D16 /* Roast.h */,
+				762A12C819A5387F009F4D16 /* Roast.m */,
 				762A129E19A526F7009F4D16 /* AppDelegate.h */,
 				762A129F19A526F7009F4D16 /* AppDelegate.m */,
 				762A12A119A526F7009F4D16 /* Main.storyboard */,
 				762A12A419A526F7009F4D16 /* FirstViewController.h */,
 				762A12A519A526F7009F4D16 /* FirstViewController.m */,
+				76CA998D19AFC7110096FB4D /* SaveRoastViewController.h */,
+				76CA998E19AFC7120096FB4D /* SaveRoastViewController.m */,
+				76CA998F19AFC7120096FB4D /* SaveRoastViewController.xib */,
 				762A12A719A526F7009F4D16 /* SecondViewController.h */,
 				762A12A819A526F7009F4D16 /* SecondViewController.m */,
 				762A12AA19A526F7009F4D16 /* Images.xcassets */,
@@ -241,6 +249,7 @@
 				762A12AB19A526F7009F4D16 /* Images.xcassets in Resources */,
 				762A129A19A526F7009F4D16 /* InfoPlist.strings in Resources */,
 				762A12A319A526F7009F4D16 /* Main.storyboard in Resources */,
+				76CA999119AFC7120096FB4D /* SaveRoastViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				762A12A919A526F7009F4D16 /* SecondViewController.m in Sources */,
+				76CA999019AFC7120096FB4D /* SaveRoastViewController.m in Sources */,
 				762A12A019A526F7009F4D16 /* AppDelegate.m in Sources */,
 				762A12A619A526F7009F4D16 /* FirstViewController.m in Sources */,
 				762A12C919A5387F009F4D16 /* Roast.m in Sources */,
@@ -470,6 +480,7 @@
 				762A12C319A526F7009F4D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		762A12C419A526F7009F4D16 /* Build configuration list for PBXNativeTarget "RoastBuddyTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +489,7 @@
 				762A12C619A526F7009F4D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

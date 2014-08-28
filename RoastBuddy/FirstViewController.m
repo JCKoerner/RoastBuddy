@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "Roast.h"
 
 @interface FirstViewController ()
 
@@ -20,6 +21,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
     
     self.timerDisplay.text = @"0:00.0";
     isRunning = FALSE;
@@ -132,22 +136,25 @@
 
 #pragma mark UI/Timer Methods
 
+
+
+-(NSTimeInterval)getElapsedRoastTime {
+    return globalElapsedTime+([NSDate timeIntervalSinceReferenceDate] - currentEpochStart);
+}
+
+
 -(void)updateGlobalTimer {
     
     if (isRunning == FALSE) {
         return;
     }
     
-    NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
-    NSTimeInterval epochElapsed = currentTime - currentEpochStart;
-    
-    
 
-    self.elapsedTimeLabel.text = [self formattedTimeStringForInterval:globalElapsedTime+epochElapsed];
+    self.elapsedTimeLabel.text = [self formattedTimeStringForInterval:[self getElapsedRoastTime]];
     
     
     if (firstCrackStart != 0 && phase >=1) {
-        self.timerDisplay.text = [NSString stringWithFormat:@"Time since 1C:   %@",[self formattedTimeStringForInterval:currentTime-firstCrackStart]] ;
+        self.timerDisplay.text = [NSString stringWithFormat:@"Time since 1C:   %@",[self formattedTimeStringForInterval:[self getElapsedRoastTime] - firstCrackStart]] ;
     }
     
     [self performSelector:@selector(updateGlobalTimer) withObject:self afterDelay:0.01];
@@ -229,7 +236,6 @@
         
         
         
-        
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cancel Roast" message:@"Are you sure you want to cancel this roast?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
         [alert show];
@@ -253,27 +259,25 @@
 
 
 -(IBAction)handleFirstCrackStartPressed:(id)sender {
-    // target roast duration logic
-    NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
-    NSTimeInterval epochElapsed = currentTime - currentEpochStart;
     
-    NSTimeInterval targetIntervalHigh = epochElapsed/.75;
-    NSTimeInterval targetIntervalLow = epochElapsed/.80;
+    // target roast duration logic
+    firstCrackStart = [self getElapsedRoastTime];
+    phase = 1;
+
+    NSTimeInterval targetIntervalHigh = firstCrackStart/.75;
+    NSTimeInterval targetIntervalLow = firstCrackStart/.80;
     
     NSString *theText = [NSString stringWithFormat:@"%@ - %@", [self formattedTimeStringForInterval:targetIntervalLow], [self formattedTimeStringForInterval:targetIntervalHigh]];
     [self.targetTimeLabel setText:theText];
     
     
     // UI updates
-    
     [self.finishButton setTitle:@"Pause" forState:UIControlStateNormal];
     [UIView animateWithDuration:.5 animations:^{
         self.timerDisplay.alpha = 1;
         self.finishButton.alpha = 1;
     }];
 
-    firstCrackStart = [NSDate timeIntervalSinceReferenceDate];
-    phase = 1;
     
     [self deactivateButton:self.firstCrackStartButton];
 
@@ -282,7 +286,7 @@
 }
 
 -(IBAction)handleFirstCrackEndPressed:(id)sender {
-    firstCrackEnd = [NSDate timeIntervalSinceReferenceDate];
+    firstCrackEnd = [self getElapsedRoastTime];
     phase = 2;
     
     [self deactivateButton:self.firstCrackEndButton];
@@ -293,7 +297,7 @@
 }
 
 -(IBAction)handleSecondCrackStartPressed:(id)sender {
-    secondCrackStart = [NSDate timeIntervalSinceReferenceDate];
+    secondCrackStart = [self getElapsedRoastTime];
     phase = 3;
     
     [self deactivateButton:self.secondCrackStartButton];
@@ -306,6 +310,7 @@
         [sender setAlpha:0];
         [self.resumeButton setAlpha:1];
         [self.saveButton setAlpha:1];
+        globalElapsedTime += [NSDate timeIntervalSinceReferenceDate] - currentEpochStart;
     } else {
         
     }
@@ -314,6 +319,7 @@
 
 -(IBAction)handleResumeButtonPressed:(id)sender {
     isRunning = TRUE;
+    currentEpochStart = [NSDate timeIntervalSinceReferenceDate];
     [self updateGlobalTimer];
     
     [self.resumeButton setAlpha:0];
@@ -328,7 +334,15 @@
 }
 
 -(IBAction)handleSaveButtonPressed:(id)sender {
+   // finalize all roast vars
+    totalRoastTime = [self getElapsedRoastTime];
     
+    Roast *theRoast = [[Roast alloc] init];
+    [theRoast setRoastDate:[NSDate date]];
+    [theRoast setFirstCrack:firstCrackStart];
+    [theRoast setFirstCrackEnd:firstCrackEnd];
+    [theRoast setSecondCrack:secondCrackStart];
+    [theRoast setTotalRoastTime:totalRoastTime];
 }
 
 
