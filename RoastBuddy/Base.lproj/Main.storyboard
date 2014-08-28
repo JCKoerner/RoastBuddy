@@ -13,61 +13,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="RoastBuddy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zhg-ve-WU7">
-                                <rect key="frame" x="20" y="45" width="280" height="42"/>
+                            <view contentMode="scaleToFill" id="D0F-yM-YMj">
+                                <rect key="frame" x="-10" y="73" width="336" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="RoastBuddy" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zhg-ve-WU7">
+                                <rect key="frame" x="20" y="26" width="280" height="42"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Deb-h3-MQW" userLabel="timer display">
-                                <rect key="frame" x="24" y="114" width="245" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Deb-h3-MQW" userLabel="1C timer display">
+                                <rect key="frame" x="24" y="83" width="245" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRD-jA-gCn" userLabel="elapsed time">
-                                <rect key="frame" x="38" y="153" width="245" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="38" y="106" width="245" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="93"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pTq-53-nbp">
-                                <rect key="frame" x="38" y="452" width="245" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="target label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pTq-53-nbp">
+                                <rect key="frame" x="45" y="425" width="245" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DYH-sE-Zzu">
-                                <rect key="frame" x="48" y="269" width="70" height="70"/>
+                                <rect key="frame" x="38" y="219" width="245" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="START"/>
                                 <connections>
-                                    <action selector="handleStartPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="nf4-t8-X1B"/>
+                                    <action selector="handleStartPressed:" destination="CZ4-MO-1fc" eventType="touchDown" id="LY5-ID-E1r"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LRn-3w-eNE">
-                                <rect key="frame" x="203" y="269" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wNm-CT-3Ym">
+                                <rect key="frame" x="38" y="456" width="245" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="RESET"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="handleResetPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="19U-04-mLa"/>
+                                    <action selector="handleFinishButtonPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="Uo2-wa-llf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uoG-DY-Z0x" userLabel="resume">
+                                <rect key="frame" x="38" y="456" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleFinishButtonPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="sJf-Zt-MLL"/>
+                                    <action selector="handleResumeButtonPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="tO2-w6-gVT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1xg-GM-Kv3" userLabel="save">
+                                <rect key="frame" x="183" y="456" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleFinishButtonPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="Rzy-JT-VPw"/>
+                                    <action selector="handleSaveButtonPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="mDr-OP-thV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BDm-So-fSq">
+                                <rect key="frame" x="38" y="285" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="1C Start"/>
+                                <connections>
+                                    <action selector="handleFirstCrackStartPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="9Fi-Jv-kWq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sSp-Uz-qjU">
+                                <rect key="frame" x="125" y="284" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="1C End"/>
+                                <connections>
+                                    <action selector="handleFirstCrackEndPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="csO-pG-crn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fs9-aU-mLl">
+                                <rect key="frame" x="213" y="285" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="2C Start"/>
+                                <connections>
+                                    <action selector="handleSecondCrackStartPressed:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="Bi2-Ju-QIS"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="u1e-5L-l1D"/>
                     <connections>
                         <outlet property="elapsedTimeLabel" destination="HRD-jA-gCn" id="uSk-5w-N8e"/>
-                        <outlet property="resetButton" destination="LRn-3w-eNE" id="nH8-T2-J9S"/>
+                        <outlet property="finishButton" destination="wNm-CT-3Ym" id="hwQ-Sj-81Z"/>
+                        <outlet property="firstCrackEndButton" destination="sSp-Uz-qjU" id="LCN-pe-0bL"/>
+                        <outlet property="firstCrackStartButton" destination="BDm-So-fSq" id="HXl-6b-yJI"/>
+                        <outlet property="resumeButton" destination="uoG-DY-Z0x" id="H7E-uH-XPW"/>
+                        <outlet property="saveButton" destination="1xg-GM-Kv3" id="ufd-uL-JX8"/>
+                        <outlet property="secondCrackStartButton" destination="fs9-aU-mLl" id="hRx-M0-XwP"/>
                         <outlet property="startButton" destination="DYH-sE-Zzu" id="hRE-1w-EIk"/>
                         <outlet property="targetTimeLabel" destination="pTq-53-nbp" id="AVO-nU-Erh"/>
                         <outlet property="timerDisplay" destination="Deb-h3-MQW" id="dud-By-8Kz"/>
+                        <outlet property="whiteBackgroundView" destination="D0F-yM-YMj" id="ST4-47-WZR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
