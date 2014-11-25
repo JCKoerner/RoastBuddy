@@ -23,6 +23,10 @@
 		762A12BC19A526F7009F4D16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 762A12BA19A526F7009F4D16 /* InfoPlist.strings */; };
 		762A12BE19A526F7009F4D16 /* RoastBuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762A12BD19A526F7009F4D16 /* RoastBuddyTests.m */; };
 		762A12C919A5387F009F4D16 /* Roast.m in Sources */ = {isa = PBXBuildFile; fileRef = 762A12C819A5387F009F4D16 /* Roast.m */; };
+		769854D919BA703C0022B0A8 /* bean@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 769854D519BA703C0022B0A8 /* bean@1x.png */; };
+		769854DA19BA703C0022B0A8 /* bean@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 769854D619BA703C0022B0A8 /* bean@2x.png */; };
+		769854DB19BA703C0022B0A8 /* fire@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 769854D719BA703C0022B0A8 /* fire@1x.png */; };
+		769854DC19BA703C0022B0A8 /* fire@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 769854D819BA703C0022B0A8 /* fire@2x.png */; };
 		76CA999019AFC7120096FB4D /* SaveRoastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CA998E19AFC7120096FB4D /* SaveRoastViewController.m */; };
 		76CA999119AFC7120096FB4D /* SaveRoastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76CA998F19AFC7120096FB4D /* SaveRoastViewController.xib */; };
 /* End PBXBuildFile section */
@@ -61,6 +65,10 @@
 		762A12BD19A526F7009F4D16 /* RoastBuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoastBuddyTests.m; sourceTree = "<group>"; };
 		762A12C719A5387F009F4D16 /* Roast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Roast.h; path = ../Roast.h; sourceTree = "<group>"; };
 		762A12C819A5387F009F4D16 /* Roast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Roast.m; path = ../Roast.m; sourceTree = "<group>"; };
+		769854D519BA703C0022B0A8 /* bean@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bean@1x.png"; sourceTree = "<group>"; };
+		769854D619BA703C0022B0A8 /* bean@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bean@2x.png"; sourceTree = "<group>"; };
+		769854D719BA703C0022B0A8 /* fire@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fire@1x.png"; sourceTree = "<group>"; };
+		769854D819BA703C0022B0A8 /* fire@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fire@2x.png"; sourceTree = "<group>"; };
 		76CA998D19AFC7110096FB4D /* SaveRoastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveRoastViewController.h; sourceTree = "<group>"; };
 		76CA998E19AFC7120096FB4D /* SaveRoastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveRoastViewController.m; sourceTree = "<group>"; };
 		76CA998F19AFC7120096FB4D /* SaveRoastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveRoastViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +156,10 @@
 				762A129819A526F7009F4D16 /* InfoPlist.strings */,
 				762A129B19A526F7009F4D16 /* main.m */,
 				762A129D19A526F7009F4D16 /* RoastBuddy-Prefix.pch */,
+				769854D519BA703C0022B0A8 /* bean@1x.png */,
+				769854D619BA703C0022B0A8 /* bean@2x.png */,
+				769854D719BA703C0022B0A8 /* fire@1x.png */,
+				769854D819BA703C0022B0A8 /* fire@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -248,7 +260,11 @@
 			files = (
 				762A12AB19A526F7009F4D16 /* Images.xcassets in Resources */,
 				762A129A19A526F7009F4D16 /* InfoPlist.strings in Resources */,
+				769854DA19BA703C0022B0A8 /* bean@2x.png in Resources */,
 				762A12A319A526F7009F4D16 /* Main.storyboard in Resources */,
+				769854D919BA703C0022B0A8 /* bean@1x.png in Resources */,
+				769854DB19BA703C0022B0A8 /* fire@1x.png in Resources */,
+				769854DC19BA703C0022B0A8 /* fire@2x.png in Resources */,
 				76CA999119AFC7120096FB4D /* SaveRoastViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

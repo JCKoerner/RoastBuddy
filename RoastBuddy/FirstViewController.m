@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "Roast.h"
+#import "SaveRoastViewController.h"
 
 @interface FirstViewController ()
 
@@ -21,9 +22,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    
-    
+    self.title = @"RoastBuddy";
+    self.tabBarItem.title = @"Roasts";
+
     
     self.timerDisplay.text = @"0:00.0";
     isRunning = FALSE;
@@ -97,6 +98,11 @@
     
     [self resetDisplay];
 }
+
+
+//-(void)viewDidAppear:(BOOL)animated {
+//    self.navigationController.navigationBarHidden = TRUE;
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -343,6 +349,9 @@
     [theRoast setFirstCrackEnd:firstCrackEnd];
     [theRoast setSecondCrack:secondCrackStart];
     [theRoast setTotalRoastTime:totalRoastTime];
+    SaveRoastViewController *saveRoast = [[SaveRoastViewController alloc] initWithRoast:theRoast];
+    [self.navigationController pushViewController:saveRoast animated:YES];
+    
 }
 
 

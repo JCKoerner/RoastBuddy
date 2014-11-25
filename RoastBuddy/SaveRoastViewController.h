@@ -7,7 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Roast.h"
 
-@interface SaveRoastViewController : UIViewController
+@interface SaveRoastViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    Roast *roast;
+}
+
+
+
+-(id)initWithRoast:(Roast *)theRoast;
+
+
+
+
+
+@property (weak, nonatomic) IBOutlet UITableView *roastDetailsTableView;
+
+
+
+
 
 @end
